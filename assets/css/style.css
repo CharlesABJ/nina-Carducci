@@ -403,32 +403,6 @@ footer .social .copyright {
 /* >==================== FOOTER OFF ====================> */
 
 
-@media screen and (max-width: 768px) {
-	.footer__container {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.footer__info {
-		width: 100%;
-		margin-bottom: 30px;
-		text-align: center;
-	}
-
-	.footer__social {
-		width: 100%;
-		justify-content: center;
-	}
-
-	.footer__link {
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-}
-
-
-/* >==================== FOOTER OF ====================> */
-
 
 /* <==================== RESPONSIVE ON ====================< */
 @media screen and (max-width: 1180px) {
@@ -520,13 +494,13 @@ footer .social .copyright {
 }
 
 @media screen and (max-width: 650px) {
-	.top-header {
+	header {
 		flex-direction: column;
 		padding-inline: 0;
 	}
 
-	.top-header .nav,
-	.top-header .nav ul {
+	header nav,
+	header nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
 	}
