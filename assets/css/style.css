@@ -7,7 +7,7 @@
 
 body {
 	max-width: 1920px;
-	margin: auto;
+	margin: 0 auto;
 }
 
 
@@ -132,37 +132,49 @@ header nav ul li a img {
 }
 
 
-nav-item
 #gallery .gallery {
-	display: none;
-	padding: 0 115px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
-#gallery .gallery .nav {
+#gallery ul {
+	display: flex;
 	justify-content: center;
+	list-style: none;
+	margin: 0 0 30px 0;
 }
 
-#gallery .gallery .nav-pills .nav-link {
-	color: #000;
+#gallery ul li {
 	cursor: pointer;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	margin: 0 10px;
 }
 
-#gallery .gallery .nav-pills .nav-link:hover {
+#gallery ul li:hover {
 	color: #fff;
 	background: #968f478f;
 }
 
-#gallery .gallery .nav-pills .nav-link.active {
+#gallery ul li.active-tag {
 	color: #fff;
 	background: #BEB45A;
 }
 
-#gallery .gallery .nav-pills .nav-link.active:hover {
+#gallery ul li.active:hover {
 	color: #fff;
 	background: #BEB45A;
 }
 
-
+#gallery .gallery picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	cursor: pointer;
+}
+/* 
 
 #gallery .gallery .item-column {
 	position: relative;
@@ -177,13 +189,13 @@ nav-item
 
 }
 
-#gallery .gallery .gallery-item {
+#gallery .gallery .gallery-item img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	padding: .5em;
-}
+} */
 
 
 /* ----quotes---- */
@@ -344,7 +356,7 @@ footer {
 
 
 footer .info {
-	width: 50%;
+	width: 70%;
 }
 
 footer .info h4 {
@@ -374,7 +386,7 @@ footer .social {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 50%;
+	width: 30%;
 }
 
 footer .social .icones {
@@ -400,8 +412,77 @@ footer .social .copyright {
 	font-size: 12px;
 }
 
+
 /* >==================== FOOTER OFF ====================> */
 
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: none;
+}
+
+.modal-container.active-modal {
+    display: block !important;
+}
+
+.modal-container .overlay {
+    position: absolute;
+    background: #333333d3;
+    width: 100%;
+    height: 100%;
+    cursor: auto;
+}
+
+.modal-container .modal {
+    position: absolute;
+    width: 480px;
+    height:80%;
+    background: #ffffff;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-container .modal img {
+    width: 100%;
+	height: 100%;
+	padding: 15px;
+	object-fit: contain;
+	position: relative;
+}
+
+.modal-container .modal span {
+   font-size: 20px;
+   position: absolute;
+   border-radius: 50%;
+   padding: 0 7px;
+   border: solid rgb(117, 117, 117) 1px;
+   cursor: pointer;
+   background: white;
+   z-index: 11;
+}
+
+.modal-container .modal span:hover {
+	background: #4e4e4e;
+ }
+.modal-container .modal .left {
+	top: 50%;
+	left: 5px;
+ }
+ 
+ .modal-container .modal .right {
+	top: 50%;
+	right: 5px;
+ }
 
 
 /* <==================== RESPONSIVE ON ====================< */
