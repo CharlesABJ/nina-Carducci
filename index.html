@@ -31,7 +31,24 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 
 	<script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://kit.fontawesome.com/a117eb47ea.js" crossorigin="anonymous"></script>
+	<script defer src="https://kit.fontawesome.com/a117eb47ea.js" crossorigin="anonymous"></script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Nina Carducci",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "68 avenue Alsace-Lorraine",
+                "addressLocality": "Bordeaux",
+                "postalCode": "33200",
+				"adressRegion": "Nouvelle-Aquitaine",
+                "addressCountry": "FRANCE"
+            },
+            "telephone": "05 56 67 78 89",
+            "openingHours": "Lundi au vendredi de 10h à 19h"
+        }
+    </script>
 	<script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -64,18 +81,24 @@
 						aria-label="Slide 3"></button>
 				</div>
 				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="./assets/images/slider/ryoji-iwata.jpg" class="d-block w-100"
+					<picture class="carousel-item active">
+					<source media="(max-width: 650px)" srcset="./assets/images/slider/ryoji-iwata-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/slider/ryoji-iwata.webp">
+						<img src="./assets/images/slider/ryoji-iwata.webp" class="d-block w-100"
 							alt="Portrait de rue de Ryoji Iwata">
-					</div>
-					<div class="carousel-item">
-						<img src="./assets/images/slider/nicholas-green.jpg" class="d-block w-100"
+					</picture>
+					<picture class="carousel-item">
+					<source media="(max-width: 650px)" srcset="./assets/images/slider/nicholas-green-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/slider/nicholas-green.webp">
+						<img src="./assets/images/slider/nicholas-green.webp" class="d-block w-100"
 							alt="Photo de concert de Nicholas Green">
-					</div>
-					<div class="carousel-item">
-						<img src="./assets/images/slider/edward-cisneros.jpg" class="d-block w-100"
+					</picture>
+					<picture class="carousel-item">
+					<source media="(max-width: 650px)" srcset="./assets/images/slider/edward-cisneros-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/slider/edward-cisneros.webp">
+						<img src="./assets/images/slider/edward-cisneros.webp" class="d-block w-100"
 							alt="Photo de mariage d'Edward Cisneros">
-					</div>
+					</picture>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
 					data-bs-slide="prev">
@@ -123,61 +146,61 @@
 			</ul>
 			<div class="gallery">
 				<picture data-gallery-tag="Concert" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/concerts/aaron-paul.jpg">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/concerts/aaron-paul-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/concerts/aaron-paul.webp">
 					<img data-gallery-tag="Concert" class="gallery-item"
-						src="./assets/images/gallery/concerts/aaron-paul.jpg" alt="Photographie de concert d'Aaron Paul"
-						loading="lazy">
+						src="./assets/images/gallery/concerts/aaron-paul.webp" alt="Photographie de concert d'Aaron Paul"
+						loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Entreprises" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/entreprise/ali-morshedlou.jpg">
-					<img src="./assets/images/gallery/entreprise/ali-morshedlou.jpg"
-						alt="Photographie d'entreprise d'Ali Morshedlou" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/entreprise/ali-morshedlou-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/entreprise/ali-morshedlou.webp">
+					<img src="./assets/images/gallery/entreprise/ali-morshedlou.webp"
+						alt="Photographie d'entreprise d'Ali Morshedlou" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Entreprises" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/entreprise/jason-goodman.jpg">
-					<img src="./assets/images/gallery/entreprise/jason-goodman.jpg"
-						alt="Photographie d'entreprise de Jason Goodman" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/entreprise/jason-goodman-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/entreprise/jason-goodman.webp">
+					<img src="./assets/images/gallery/entreprise/jason-goodman.webp"
+						alt="Photographie d'entreprise de Jason Goodman" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Mariages" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/mariage/hannah-busing.jpg">
-					<img src="./assets/images/gallery/mariage/hannah-busing.jpg"
-						alt="Photographie de mariage d'Hannah Busing" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/mariage/hannah-busing-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/mariage/hannah-busing.webp">
+					<img src="./assets/images/gallery/mariage/hannah-busing.webp"
+						alt="Photographie de mariage d'Hannah Busing" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Portrait" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/portraits/ade-tunji.jpg">
-					<img src="./assets/images/gallery/portraits/ade-tunji.jpg" alt="Portrait d'Ade Tunji"
-						loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/portraits/ade-tunji-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/portraits/ade-tunji.webp">
+					<img src="./assets/images/gallery/portraits/ade-tunji.webp" alt="Portrait d'Ade Tunji"
+						loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Mariages" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/mariage/jakob-owens.jpg">
-					<img src="./assets/images/gallery/mariage/jakob-owens.jpg"
-						alt="Photographie de mariage de Jakob Owens" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/mariage/jakob-owens-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/mariage/jakob-owens.webp">
+					<img src="./assets/images/gallery/mariage/jakob-owens.webp"
+						alt="Photographie de mariage de Jakob Owens" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Portrait" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/portraits/nino-van-prattenburg-mobile.webp">
 					<source media="(min-width: 651px)"
-						srcset="./assets/images/gallery/portraits/nino-van-prattenburg.jpg">
-					<img src="./assets/images/gallery/portraits/nino-van-prattenburg.jpg"
-						alt="Portrait de Nino Van Prattenburg" loading="lazy">
+						srcset="./assets/images/gallery/portraits/nino-van-prattenburg.webp">
+					<img src="./assets/images/gallery/portraits/nino-van-prattenburg.webp"
+						alt="Portrait de Nino Van Prattenburg" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Concert" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px)" srcset="./assets/images/gallery/concerts/austin-neill.jpg">
-					<img src="./assets/images/gallery/concerts/austin-neill.jpg"
-						alt="Photographie de concert d'Austin Neill" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/concerts/austin-neill-mobile.webp">
+					<source media="(min-width: 651px)" srcset="./assets/images/gallery/concerts/austin-neill.webp">
+					<img src="./assets/images/gallery/concerts/austin-neill.webp"
+						alt="Photographie de concert d'Austin Neill" loading="lazy" width="380" height="380">
 				</picture>
 				<picture data-gallery-tag="Entreprises" class="gallery-item">
-					<source media="(max-width: 650px)" srcset="">
-					<source media="(min-width: 651px"
-						srcset="./assets/images/gallery/entreprise/mateus-campos-felipe.jpg">
-					<img src="./assets/images/gallery/entreprise/mateus-campos-felipe.jpg"
-						alt="Photographie d'entreprise de Mateus Campos Felipe" loading="lazy">
+					<source media="(max-width: 650px)" srcset="./assets/images/gallery/entreprise/mateus-campos-felipe-mobile.webp">
+					<source media="(min-width: 651px)"
+						srcset="./assets/images/gallery/entreprise/mateus-campos-felipe.webp">
+					<img src="./assets/images/gallery/entreprise/mateus-campos-felipe.webp"
+						alt="Photographie d'entreprise de Mateus Campos Felipe" loading="lazy" width="380" height="380">
 				</picture>
 			</div>
 			<div class="quote">
@@ -264,22 +287,20 @@
 	</main>
 
 	<footer>
-		<div itemscope itemtype="https://schema.org/LocalBusiness" class="info">
-			<h4 itemprop="name">Nina Carducci</h4>
+		<div class="info">
+			<h4>Nina Carducci</h4>
 			<ul>
-				<li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-					<i class="fa-solid fa-location-dot"></i>&nbsp;
-					<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>,&nbsp;<span
-						itemprop="addressLocality">Bordeaux</span>&nbsp;<span
-						itemprop="postalCode">33200</span>,&nbsp;<span itemprop="addressCountry">FRANCE</span>
+				<li>
+					<i class="fa-solid fa-location-dot"></i>
+					<span>68 avenue Alsace-Lorraine Bordeaux 33200, FRANCE</span>
 				</li>
 				<li>
 					<i class="fa-solid fa-phone"></i>
-					<a itemprop="telephone" href="tel:0556677889">05 56 67 78 89</a>
+					<a href="tel:0556677889">05 56 67 78 89</a>
 				</li>
 				<li>
 					<i class="fa-regular fa-clock"></i>
-					<span itemprop="openingHours">Lundi au vendredi de 10h à 19h</span>
+					<span>Lundi au vendredi de 10h à 19h</span>
 				</li>
 			</ul>
 		</div>
@@ -298,11 +319,12 @@
 	<div class="modal-container">
 		<div class="overlay"></div>
 		<div class="modal">
-				<span class="left">&lt;</span>
-				<span class="right">&gt;</span>
+				<button class="back">«</button>
+				<button class="next">»</button>
 				
 		</div>
 	</div>
 </body>
 
 </html>
+
