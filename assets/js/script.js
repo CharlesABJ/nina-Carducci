@@ -52,18 +52,19 @@ for (let image of imagesOfGallery) {
 
 //Afficher l'image cliquée dans la modale
 const imagesCloneInModal = document.querySelectorAll(".modal img");
-let x = 0
+let x = 0;
 
 for (let image of imagesCloneInModal) {
-  image.setAttribute("image-id", x++)}
+  image.setAttribute("image-id", x++);
+}
 
 for (let imageOfGallery of imagesOfGallery) {
   imageOfGallery.addEventListener("click", function () {
     for (let image of imagesCloneInModal) {
       if (image.src === imageOfGallery.src) {
         image.classList.add("image-active-in-modal");
-        counter = image.getAttribute("image-id") 
-      console.log(counter);
+        counter = image.getAttribute("image-id");
+        console.log(counter);
       } else {
         image.classList.remove("image-active-in-modal");
       }
@@ -71,7 +72,7 @@ for (let imageOfGallery of imagesOfGallery) {
   });
 }
 
-//Afficher l'image suivante 
+//Afficher l'image suivante
 function nextImage() {
   for (let image of imagesCloneInModal) {
     image.classList.remove("image-active-in-modal");
@@ -87,8 +88,7 @@ function nextImage() {
 }
 nextButton.addEventListener("click", nextImage);
 
-
-//Afficher l'image précédente 
+//Afficher l'image précédente
 function backImage() {
   for (let image of imagesCloneInModal) {
     image.classList.remove("image-active-in-modal");
