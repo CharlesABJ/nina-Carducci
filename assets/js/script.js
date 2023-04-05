@@ -44,6 +44,7 @@ for (let trigger of modalTriggers) {
 }
 
 //Cloner les images de  gallery dans la modale
+
 for (let image of imagesOfGallery) {
   const imageCloneInModal = image.cloneNode(true);
   modal.append(imageCloneInModal);
@@ -51,12 +52,18 @@ for (let image of imagesOfGallery) {
 
 //Afficher l'image cliquée dans la modale
 const imagesCloneInModal = document.querySelectorAll(".modal img");
+let x = 0
+
+for (let image of imagesCloneInModal) {
+  image.setAttribute("image-id", x++)}
 
 for (let imageOfGallery of imagesOfGallery) {
   imageOfGallery.addEventListener("click", function () {
     for (let image of imagesCloneInModal) {
       if (image.src === imageOfGallery.src) {
         image.classList.add("image-active-in-modal");
+        counter = image.getAttribute("image-id") 
+      console.log(counter);
       } else {
         image.classList.remove("image-active-in-modal");
       }

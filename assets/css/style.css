@@ -188,7 +188,7 @@ header nav ul li a img {
 	width: 70%;
 }
 
-.quote figure blockquote h4 {
+.quote figure blockquote h3, .quote figure blockquote h4 {
 	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
@@ -494,14 +494,9 @@ footer .social .copyright {
 @media screen and (max-width: 1000px) {
 	#about {
 		flex-direction: column;
-
 	}
 
-	.picture {
-		width: 50%;
-	}
-
-	.picture.left::before {
+	#about .portrait::before {
 		width: 100%;
 		height: 30%;
 		position: absolute;
@@ -511,23 +506,37 @@ footer .social .copyright {
 		z-index: -1;
 	}
 
-	.about-me__title {
+	#about .about-me h2 {
 		text-align: center;
 		margin-top: 1em;
+	}
+
+	#about .about-me p, #about .about-me .introduction  {
+		width: 100%;
+	}
+
+	#about .portrait {
+		width: 50%;
+	}
+	#gallery .quote figure{
+		width: 100%;
+	}
+	.quote figure blockquote h3, .quote figure blockquote h4 {
+		font-size: calc(1.375rem + 1.5vw);
 	}
 
 	#services .container {
 		flex-direction: column;
 	}
 
-	.service {
+	#services .container .service {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
 		margin: 2em 0
 	}
 
-	.description {
+	#services .container .service  .description {
 		margin-bottom: 1em;
 	}
 
@@ -540,21 +549,33 @@ footer .social .copyright {
 		z-index: 0;
 	}
 
-	#contact .container {
+	#contact {
 		flex-direction: column;
+		padding-inline: 0;
 	}
 
-	#contact .picture.right {
-		margin-top: 1em;
+	#contact form {
+		width: 80%;
+		margin-inline: 100px;
+	}
+	#contact .camera-zone{
+		margin-top: 40px;
+	}
+	#contact .camera-zone .camera {
+		width: 40%;
 	}
 
-	.picture.right::before {
+	#contact .camera-zone .camera::before {
 		width: 100%;
 		height: 30%;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		z-index: -1;
+	}
+	
+	.modal-container .modal{
+		height: 50%;
 	}
 }
 
@@ -564,42 +585,19 @@ footer .social .copyright {
 		padding-inline: 0;
 	}
 
-	header nav,
-	header nav ul {
+	header nav{
 		width: 100%;
-		padding: 0 0 0 0;
+		padding-bottom: 30px;
+	}
+	header nav ul{
+		display: flex;
+		justify-content: space-around;
 	}
 
-	.top-header .nav li {
-		flex: 1;
-		padding-block: 1em;
-		text-align: center;
-	}
 
-	.picture.left::before,
-	.picture.right::before {
-		height: 150px;
-	}
+   
 
-	#services .container {
-		align-items: center;
-	}
+	
 
-	.service {
-		max-width: 90%;
-	}
 
-	#about,
-	#contact {
-		padding-inline: 2em;
-		padding-block: 2em;
-	}
-
-	form {
-		width: 100%;
-	}
-
-	.picture {
-		width: 80%;
-	}
 }
