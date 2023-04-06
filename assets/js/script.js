@@ -1,6 +1,11 @@
+//Variables
+
+//Variables filtres gallerie
 const filters = document.querySelectorAll("#gallery ul li");
 const pictures = document.querySelectorAll("picture");
 const all = document.querySelector(".all");
+
+//Variable modale
 const modalTriggers = document.querySelectorAll(
   ".gallery picture img, .overlay"
 );
@@ -64,7 +69,6 @@ for (let imageOfGallery of imagesOfGallery) {
       if (image.src === imageOfGallery.src) {
         image.classList.add("image-active-in-modal");
         counter = image.getAttribute("image-id");
-        console.log(counter);
       } else {
         image.classList.remove("image-active-in-modal");
       }
@@ -84,7 +88,6 @@ function nextImage() {
     counter = 0;
   }
   imagesCloneInModal[counter].classList.add("image-active-in-modal");
-  console.log(counter);
 }
 nextButton.addEventListener("click", nextImage);
 

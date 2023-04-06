@@ -7,6 +7,7 @@
 
 body {
 	max-width: 1920px;
+	min-width: 363px;
 	margin: 0 auto;
 }
 
@@ -405,6 +406,8 @@ footer .social .copyright {
 	position: fixed;
 	top: 0;
 	left: 0;
+	max-width: 1920px;
+	min-width: 363px;
 	width: 100vw;
 	height: 100vh;
 	z-index: 10;
@@ -479,28 +482,12 @@ footer .social .copyright {
 
 
 /* <==================== RESPONSIVE ON ====================< */
-@media screen and (max-width: 1180px) {
-	.picture {
-		flex: 2;
-	}
-
-	#about,
-	#contact .container {
-		align-items: center;
-	}
-
-	.about-me__title {
-		margin-top: 0;
-		margin-bottom: 1em;
-	}
-
-	#about-me h6,
-	#about-me p {
-		width: 100%;
-	}
-}
-
 @media screen and (max-width: 1000px) {
+
+	header{
+		padding: 22px 60px;
+	}
+
 	#about {
 		flex-direction: column;
 	}
@@ -527,6 +514,10 @@ footer .social .copyright {
 
 	#about .portrait {
 		width: 50%;
+	}
+
+	#gallery .gallery picture {
+		max-height: 240px;
 	}
 
 	#gallery .quote figure {
@@ -593,6 +584,11 @@ footer .social .copyright {
 		height: 50%;
 	}
 }
+@media screen and (max-width: 768px) {
+	#gallery .gallery{
+		grid-template-columns: 1fr 1fr;
+	}
+}
 
 @media screen and (max-width: 650px) {
 	header {
@@ -610,10 +606,120 @@ footer .social .copyright {
 		justify-content: space-around;
 	}
 
+	#about {
+		padding: 2em;
+		align-items: center;
+	}
 
+	#about .portrait {
+		width: 80%;
+	}
 
+	#about .portrait::before {
+		height: 20%;
+	}
 
+	#about .about-me h2 {
+		margin-bottom: 30px;
+	}
+	#gallery {
+		padding: 40px 10px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
+	#gallery ul {
+		flex-wrap: wrap;
+		padding: 0;
+	}
 
+	#gallery ul li{
+		margin-top: 4px;
+	}
 
+	#gallery .gallery{
+		grid-template-columns: 1fr;
+	}
+
+	#gallery .gallery picture {
+		padding-inline: 20px;
+		height: 370px;
+		width: 370px;
+	}
+
+	#services .container .service {
+		width: 80%;
+		height: auto;
+		margin: 2em auto;
+	}
+
+	#contact {
+		padding: 30px 30px 50px;
+		align-items: center;
+	}
+	
+	
+
+	#contact form {
+		width: 95%;
+		margin: 0;
+	}
+
+	#contact form h3 {
+		font-size: calc(1.3rem + 0.6vw);
+	}
+
+	#contact form input, #contact form textarea, #contact form button{
+		width: 100%;
+	}
+
+	#contact .camera-zone .camera {
+		width: 80%;
+	}
+
+	#contact .camera-zone .camera::before {
+		height: 20%;
+	}
+
+	footer{
+		padding: 30px;
+		flex-direction: column;
+	}
+
+	footer .info h4 {
+		font-size: calc(1.3rem + 0.6vw);
+	}
+
+	footer .info ul li {
+		font-size: 12px
+	}
+
+	footer .social {
+		margin-top: 5px;
+		width: 100%;
+		flex-direction: row;
+	}
+
+	footer .social i {
+		font-size: 12px;
+	}
+
+	.modal-container .modal{
+		width: calc(100vw - 50px);
+	}
+
+	.modal-container .modal img {
+		padding: 15px 15px 40px;
+	}
+
+	.modal-container .modal .back {
+		left: 40%;
+		top: 90%;
+	}
+
+	.modal-container .modal .next {
+		right: 40%;
+		top: 90%;
+	}
 }
