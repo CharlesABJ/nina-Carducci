@@ -2,7 +2,7 @@
 
 //Variables filtres gallerie
 const filters = document.querySelectorAll("#gallery ul li");
-const pictures = document.querySelectorAll("picture");
+const pictures = document.querySelectorAll("#gallery .gallery picture");
 const all = document.querySelector(".all");
 
 //Variable modale
